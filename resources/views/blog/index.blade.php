@@ -24,7 +24,7 @@
     <hr>
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1 class="post-title">Contact us</p>
+            <h1 class="post-title">Contact us</h1>
             <p><a href="{{ route('contact.create') }}">Click for more details</a></p>
         </div>
     </div>

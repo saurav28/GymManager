@@ -25,7 +25,7 @@
             <td>ID</td>
             <td>Name</td>
             <td>Email</td>
-            
+            <td>Plan</td>
             <td>Actions</td>
         </tr>
     </thead>
@@ -35,7 +35,7 @@
             <td>{{ $value->id }}</td>
             <td>{{ $value->name }}</td>
             <td>{{ $value->email }}</td>
-            
+            <td>{{ $value->plan }}</td>
 
             <!-- we will also add show, edit, and delete buttons -->
             <td>

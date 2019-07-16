@@ -30,9 +30,19 @@
         {{ Form::email('email', Request::old('email'), array('class' => 'form-control')) }}
     </div>
 
+     <div class="form-group">
+        {{ Form::label('plan', 'plan') }}
+        {{ Form::text('plan', Request::old('plan'), array('class' => 'form-control')) }}
+    </div>
+
     <div class="form-group">
         {{ Form::label('password', 'Password') }}
         {{ Form::password('password', Request::old('password'), array('class' => 'form-control')) }}
+    </div>
+
+    <div class="form-group">
+        {{ Form::label('start_date', 'start_date') }}
+        {{ Form::date('start_date', Request::old('start-date'), array('class' => 'form-control')) }}
     </div>
 
     {{ Form::submit('Create the User!', array('class' => 'btn btn-primary')) }}

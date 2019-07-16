@@ -53,7 +53,9 @@ class UsersController extends Controller
         $rules = array(
             'name'       => 'required',
             'email'      => 'required|email',
-            'password'   => 'required' 
+            'plan'       => 'required',
+            'password'   => 'required',
+            'start_date' => 'required'
             
         );
         $validator = Validator::make($request->all(), $rules);
@@ -68,11 +70,15 @@ class UsersController extends Controller
             $users = new \App\Users;
             $users->name       = $request->get('name');
             $users->email      = $request->get('email');
+            $users->plan   = $request->get('plan');
             $users->password   = $request->get('password');
+            $unformattedDate   = new \DateTime($request->get('start_date'));
+            $formattedDate = $unformattedDate-> format("Y/m/d H:i:s"); //to convert into mysql date format
+            $users->start_date = $formattedDate;
             $users->save();
 
             // redirect
-            \Session::flash('message', 'Successfully created nerd!');
+            \Session::flash('message', 'Successfully created an user!');
             return \Redirect::to('users');
         }
     }
@@ -119,6 +125,7 @@ class UsersController extends Controller
         $rules = array(
             'name'       => 'required',
             'email'      => 'required|email',
+            'plan'       => 'plan'
             
         );
         $validator = Validator::make($request->all(), $rules);
@@ -133,6 +140,7 @@ class UsersController extends Controller
             $user = \App\Users::find($id);
             $user->name       = $request->get('name');
             $user->email      = $request->get('email');
+            $user->email      = $request->get('plan');
             
             $user->save();
 

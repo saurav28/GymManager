@@ -1,7 +1,6 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand">Your neighbourhood Gym</a>
             <ul class="nav navbar-nav">
                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
                 <li><a href="{{ route('other.about') }}">About</a></li>
