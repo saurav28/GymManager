@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        //run this job daily at midnight
+        $schedule->job(new \App\Jobs\SendReports)->daily();
     }
 
     /**

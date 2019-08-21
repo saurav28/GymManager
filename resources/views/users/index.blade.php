@@ -26,6 +26,8 @@
             <td>Name</td>
             <td>Email</td>
             <td>Plan</td>
+            <td>Start date</td>
+            <td>End date</td>
             <td>Actions</td>
         </tr>
     </thead>
@@ -36,6 +38,8 @@
             <td>{{ $value->name }}</td>
             <td>{{ $value->email }}</td>
             <td>{{ $value->plan }}</td>
+            <td>{{ $value->start_date }}</td>
+            <td>{{ $value->end_date }}</td>
 
             <!-- we will also add show, edit, and delete buttons -->
             <td>
