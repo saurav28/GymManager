@@ -20,7 +20,8 @@ Route::get('/', function () {
 Route::get('contact', 'ContactController@create')->name('contact.create');
 Route::post('contact', 'ContactController@store')->name('contact.store');
 
-Route::resource('users','UsersController');
+Route::get('logout', 'Auth\LoginController@logout');
+Route::resource('users','UsersController')->middleware('auth','check_user_role:ROLE_ADMIN');
 
 Route::get('post/{id}', function () {
     return view('blog.post');
@@ -50,4 +51,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('edit', function() {
         return "It works!";
     })->name('admin.update');
+
+    
 });
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');
