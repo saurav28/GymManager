@@ -8,6 +8,8 @@ $url = parse_url($cleardburl);
 
 Log::info("URL retrieved :: " . $cleardburl);
 
+
+
 $host = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
