@@ -44,7 +44,7 @@ return [
 
     'connections' => [
 
-        'your_heroku_mysql_connection' => array(
+        'your_heroku_mysql_connection' => [
             'driver' => 'mysql',
             'host' => $host,
             'database' => $database,
@@ -53,7 +53,7 @@ return [
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
-        ),
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
