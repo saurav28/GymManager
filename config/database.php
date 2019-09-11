@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardburl = getenv("CLEARDB_DATABASE_URL");
+$url = parse_url($cleardburl);
+
+Log::info("URL retrieved :: " . $cleardburl);
 
 $host = $url["host"];
 $username = $url["user"];
