@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Log;
 $cleardburl = getenv("CLEARDB_DATABASE_URL");
 $url = parse_url($cleardburl);
 
-//Log::info("URL retrieved :: " . $cleardburl);
+error_log("URL retrieved :: " . $cleardburl);
 
 
 
