@@ -3,10 +3,10 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <p class="quote">Our gallery</p>
+            <h2>Our gallery</h2>
         </div>
     </div>
-    <div id ="#myCarousel" class="caraousel-slide" data-ride ="carousel">
+    <div id ="myCarousel" class="carousel slide" data-ride ="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -15,11 +15,11 @@
     <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="{{url('/images/1.jpg')}}" alt="Los Angeles">
+      <img src="{{url('/images/1.jpg')}}" alt="Weight racks" style="width:100%;">
     </div>
 
     <div class="item">
-      <img src="{{url('/images/2.jpeg')}}" alt="Chicago">
+      <img src="{{url('/images/2.jpeg')}}" alt="TreadMills" style="width:100%;">
     </div>
 
   </div>
