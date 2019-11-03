@@ -3,14 +3,14 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <p class="quote">Welcome to your neighourbood Gym</p>
+            <h3>Welcome to your neighourbood Gym</h3>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
             <h1 class="post-title">Plans</h1>
             <p>Plans available in our gym!</p>
-            <p><a href="{{ route('blog.post', ['id' => 1]) }}">Click to view</a></p>
+            <p><a href="{{ route('blog.plans', ['id' => 1]) }}">Click to view</a></p>
         </div>
     </div>
     <hr>

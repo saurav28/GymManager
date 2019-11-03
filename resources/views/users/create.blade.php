@@ -1,16 +1,10 @@
 <!-- app/views/nerds/create.blade.php -->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Management system</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
-@include('partials.usersheaders')
-<div class="container">
-    @yield('content')
-</div>
+
+@extends('layouts.usermaster')
+
+@section('content')
+
 
 <h1>Create an User</h1>
 
@@ -44,11 +38,9 @@
         {{ Form::label('start_date', 'start_date') }}
         {{ Form::date('start_date', Request::old('start-date'), array('class' => 'form-control')) }}
     </div>
-
+    <div class="form-group">   
     {{ Form::submit('Create the User!', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
-
 </div>
-</body>
-</html>
+@endsection

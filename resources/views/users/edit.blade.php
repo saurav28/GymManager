@@ -1,16 +1,7 @@
 <!-- app/views/nerds/edit.blade.php -->
+@extends('layouts.usermaster')
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Management</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
-@include('partials.usersheaders')
-<div class="container">
-    @yield('content')
-</div>
+@section('content')
 
 <h1>Edit {{ $user->name }}</h1>
 
@@ -36,11 +27,10 @@
         {{ Form::label('start_date', 'start_date') }}
         {{ Form::date('start_date', Request::old('start-date'), array('class' => 'form-control')) }}
     </div>
-
+    <div class="form-group">   
     {{ Form::submit('Edit the User!', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
 
 </div>
-</body>
-</html>
+@endsection

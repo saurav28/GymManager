@@ -27,6 +27,10 @@ Route::get('post/{id}', function () {
     return view('blog.post');
 })->name('blog.post');
 
+Route::get('plans', function () {
+    return view('blog.plans');
+})->name('blog.plans');
+
 Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
