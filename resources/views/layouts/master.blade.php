@@ -19,8 +19,14 @@
     <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
   
 </head>
+<style>
+body {
+ background-image: url('./images/gym_background_1.jpg');
+ background-size: cover;
+}
+</style>
 <body>
-@include('partials.header')
+<@include('partials.header')
 <div class="container">
     @yield('content')
 </div>

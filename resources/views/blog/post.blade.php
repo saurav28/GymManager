@@ -15,7 +15,7 @@
     <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="{{url('/images/1.jpg')}}" alt="Weight racks" style="width:100%;">
+      <img src="{{url('/images/gym_background.jpg')}}" alt="Weight racks" style="width:100%;">
     </div>
 
     <div class="item">
